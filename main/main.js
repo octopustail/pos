@@ -100,7 +100,7 @@ var geneInventoryStr = function (shoppingItemArr, budgetArr, footing) {
 };
 
 module.exports = function main(barCodeList) {
-    var co = database.loadAllItems(),
+    var items = database.loadAllItems(),
         promotions = database.loadPromotions();
 
     var barcodeArr, shoppingItemArr, budgetArr, footing, InventoryStr;
@@ -116,6 +116,6 @@ module.exports = function main(barCodeList) {
 
     InventoryStr = geneInventoryStr(shoppingItemArr, budgetArr, footing);
 
-    console.log(InventoryStr)
+    console.log(InventoryStr);
     return InventoryStr;
 };
