@@ -25,8 +25,6 @@ describe('pos', function () {
 
     it('should print correct text', function () {
 
-        spyOn(console, 'log');
-
        var result =  printInventory(inputs);
 
         var expectText =
@@ -44,6 +42,6 @@ describe('pos', function () {
             '**********************';
 console.log('result',result);
 
-        expect(console.log).toHaveBeenCalledWith(expectText);
+        expect(result).toEqual(expectText);
     });
 });
